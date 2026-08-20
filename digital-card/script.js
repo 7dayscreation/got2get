@@ -18,7 +18,7 @@ const CARD_DATA = {
   phone: "IN: +91 98255 19646  |  CA: +1 647-553-3563",
   phoneRaw: "+919825519646",
   phoneCanada: "+16475533563",
-  website: "https://got2get.com",
+  website: "https://got2getdesigns.com",
   slides: [
     { src: "images/intro.mp4", type: "video", alt: "Eye Q Designs Intro" },
     { src: "images/logo.png", type: "image", alt: "Eye Q Designs Logo" }
