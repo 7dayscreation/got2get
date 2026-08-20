@@ -128,17 +128,44 @@ function renderSlider(data) {
     if (slide.type === "video") {
       // Video slide — plays once, then auto-advances to the next slide
       const video = document.createElement("video");
-      video.src = slide.src;
-      video.autoplay = true;
-      video.muted = true;
-      video.playsInline = true;
+
+      // CRITICAL for mobile autoplay:
+      // Use setAttribute (HTML attributes), NOT JS properties.
+      // iOS Safari requires the attribute form, not the property form.
+      video.setAttribute("autoplay", "");
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");          // iOS 10+
+      video.setAttribute("webkit-playsinline", "");   // iOS 9 and older
+      video.setAttribute("preload", "metadata");      // 'auto' is throttled on mobile
       video.setAttribute("aria-label", slide.alt);
-      video.setAttribute("preload", "auto");
+
+      // Use <source> for better mobile codec detection
+      const source = document.createElement("source");
+      source.src = slide.src;
+      source.type = "video/mp4";
+      video.appendChild(source);
 
       // When video ends, advance to next slide and resume autoplay
       video.addEventListener("ended", () => {
         goToSlide(idx + 1);
         startSliderAutoplay();
+      });
+
+      // Explicit play() after DOM insertion (required on Android Chrome)
+      // 'canplay' fires when enough data is loaded to begin playback
+      video.addEventListener("canplay", () => {
+        video.play().catch(() => {
+          // Autoplay blocked — show tap overlay to let user start it
+          el.classList.add("video-tap-to-play");
+        });
+      }, { once: true });
+
+      // Tap-to-play fallback for devices that block autoplay
+      el.addEventListener("click", () => {
+        if (video.paused) {
+          video.play().catch(() => {});
+          el.classList.remove("video-tap-to-play");
+        }
       });
 
       el.appendChild(video);
@@ -152,6 +179,7 @@ function renderSlider(data) {
           Video
         </span>`
       );
+
 
     } else {
       // Image slide

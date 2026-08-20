@@ -256,6 +256,40 @@ svg {
   height: 12px;
 }
 
+/* Tap-to-play overlay — shown when autoplay is blocked on mobile */
+.video-tap-to-play::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.video-tap-to-play::before {
+  content: "▶  Tap to Play";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 10px 20px;
+  border-radius: 999px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+
 .slider-arrow {
   position: absolute;
   top: 50%;
