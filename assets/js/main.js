@@ -66,6 +66,9 @@ gsap.to(loaderFill, {
 // ——————————————————————————————————————————————
 function runEntranceAnimations() {
 
+  // Reveal the page in one clean frame (it was hidden during loader)
+  gsap.set('#page', { opacity: 1, visibility: 'visible' });
+
   // India panel — stagger in from bottom
   gsap.from('.hero-panel--india .panel-country', {
     opacity: 0, y: -16, duration: 0.7, ease: 'power3.out', delay: 0.05
