@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Eye Q Designs — Digital Business Card</title>
+  <meta name="description"
+    content="Eye Q Designs & Got2Get Designs — Professional graphic design studio by Sandy Patel. Logo Design, Branding, Packaging, Social Media Marketing, Web Design, Event Management and Exhibition Stall Design.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://onlineahmedabad.com/images/favicon.ico">
+
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://got2get.ca/digital-card/">
+  <meta property="og:title" content="Eye Q Designs — Digital Business Card">
+  <meta property="og:description"
+    content="Eye Q Designs & Got2Get Designs — 25+ years of professional graphic design. Logo, Branding, Packaging, Web Design & more by Sandy Patel.">
+  <meta property="og:image" content="images/logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://got2get.ca/digital-card/">
+  <meta name="twitter:title" content="Eye Q Designs — Digital Business Card">
+  <meta name="twitter:description"
+    content="Eye Q Designs & Got2Get Designs — 25+ years of professional graphic design. Logo, Branding, Packaging, Web Design & more by Sandy Patel.">
+  <meta name="twitter:image" content="images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ambient background -->
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <main class="page">
+    <div class="card-frame">
+
+      <!-- print-inspired crop marks — the card's signature motif -->
+      <span class="crop crop--tl" aria-hidden="true"></span>
+      <span class="crop crop--tr" aria-hidden="true"></span>
+      <span class="crop crop--bl" aria-hidden="true"></span>
+      <span class="crop crop--br" aria-hidden="true"></span>
+
+      <article class="card" id="card" tabindex="-1">
+
+        <!-- ============ PRODUCT SLIDER ============ -->
+        <div class="slider-container" id="productSlider">
+          <div class="slider-track" id="sliderTrack">
+            <!-- populated by JS -->
+          </div>
+          <button class="slider-arrow slider-arrow--prev" id="sliderPrevBtn" type="button" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button class="slider-arrow slider-arrow--next" id="sliderNextBtn" type="button" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+          <div class="slider-dots" id="sliderDots">
+            <!-- populated by JS -->
+          </div>
+        </div>
+
+        <!-- ============ HERO ============ -->
+        <header class="hero">
+          <div class="hero__top">
+            <span class="status" id="statusPill">
+              <span class="status__dot" aria-hidden="true"></span>
+              2026
+            </span>
+            <button class="icon-btn" id="shareBtn" type="button" aria-label="Share this card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="18" cy="5" r="2.6" />
+                <circle cx="6" cy="12" r="2.6" />
+                <circle cx="18" cy="19" r="2.6" />
+                <line x1="8.3" y1="10.7" x2="15.7" y2="6.3" />
+                <line x1="8.3" y1="13.3" x2="15.7" y2="17.7" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="avatar" id="avatar" aria-hidden="true">
+            <span class="avatar__ring"></span>
+            <img src="images/mono-logo.jpg" class="avatar__logo" id="avatarInitials" alt="Eye Q Designs logo">
+          </div>
+
+          <img src="images/logo.png" class="brand-logo" alt="Eye Q Designs">
+          <p class="eyebrow" id="eyebrow">Sandy Patel</p>
+          <h1 class="name sr-only" id="cardName">Eye Q Designs</h1>
+          <p class="role" id="cardRole">Founder and Marketing Head</p>
+          <p class="tagline" id="cardTagline">“Transforming Spaces. Elevating Lifestyles.”</p>
+
+          <!-- quick actions -->
+          <nav class="actions" id="actions" aria-label="Quick contact actions">
+            <a class="action-btn" id="actCall" href="#" aria-label="Call">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path
+                  d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z" />
+              </svg>
+              <span>Call</span>
+            </a>
+            <a class="action-btn" id="actWhatsapp" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M20 12a8 8 0 1 1-3.7-6.7" />
+                <path d="M20 4l-4.2 7.3-3.3-2" />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <a class="action-btn" id="actEmail" href="#" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+              <span>Email</span>
+            </a>
+            <a class="action-btn" id="actWeb" href="https://nexadecor.in" target="_blank" rel="noopener"
+              aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9S9.6 5.6 12 3Z" />
+              </svg>
+              <span>Website</span>
+            </a>
+          </nav>
+
+          <button class="save-btn" id="saveBtn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 3v13m0 0-4.5-4.5M12 16l4.5-4.5" />
+              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+            </svg>
+            Save Contact
+          </button>
+        </header>
+
+        <!-- ============ INFO STRIP ============ -->
+        <section class="info-strip" aria-label="Business details">
+          <div class="info-row" data-copy data-copy-target="infoBusiness">
+            <span class="info-row__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="4" y="9" width="16" height="12" rx="1" />
+                <path d="M9 21V9M4 9l2.5-5h11L20 9" />
+              </svg>
+            </span>
+            <span class="info-row__text">
+              <span class="info-row__label">Business</span>
+              <span class="info-row__value" id="infoBusiness">Nexa Decor</span>
+            </span>
+          </div>
+          <div class="info-row" data-copy data-copy-target="infoLocation">
+            <span class="info-row__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" />
+                <circle cx="12" cy="9.5" r="2.4" />
+              </svg>
+            </span>
+            <span class="info-row__text">
+              <span class="info-row__label">Location</span>
+              <span class="info-row__value" id="infoLocation">Ahmedabad, Gujarat, India</span>
+            </span>
+          </div>
+          <div class="info-row" data-copy data-copy-target="infoEmail">
+            <span class="info-row__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+            </span>
+            <span class="info-row__text">
+              <span class="info-row__label">Email</span>
+              <span class="info-row__value" id="infoEmail">nexadecor.in@gmail.com</span>
+            </span>
+            <button class="copy-btn" type="button" aria-label="Copy email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="9" y="9" width="11" height="11" rx="1.5" />
+                <path d="M5 15V5a1 1 0 0 1 1-1h10" />
+              </svg>
+            </button>
+          </div>
+          <div class="info-row" data-copy data-copy-target="infoPhone">
+            <span class="info-row__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path
+                  d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z" />
+              </svg>
+            </span>
+            <span class="info-row__text">
+              <span class="info-row__label">Phone</span>
+              <span class="info-row__value" id="infoPhone">+91 98671 42626</span>
+            </span>
+            <button class="copy-btn" type="button" aria-label="Copy phone number">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="9" y="9" width="11" height="11" rx="1.5" />
+                <path d="M5 15V5a1 1 0 0 1 1-1h10" />
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section class="section" id="aboutSection">
+          <button class="accordion__trigger" id="aboutTrigger" aria-expanded="false" aria-controls="aboutPanel">
+            <span class="section__title">About</span>
+            <span class="accordion__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </span>
+          </button>
+          <div class="accordion__panel" id="aboutPanel">
+            <div class="accordion__inner" id="aboutContent">
+              <!-- populated by JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ HIGHLIGHTS ============ -->
+        <section class="highlights" id="highlights" aria-label="Career highlights">
+          <!-- populated by JS -->
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section class="section" data-reveal>
+          <p class="section__title section__title--static">Services</p>
+          <p class="section__sub">Tap a service to send a quick inquiry.</p>
+          <div class="services" id="services">
+            <!-- populated by JS -->
+          </div>
+        </section>
+
+        <!-- ============ SOCIAL ============ -->
+        <section class="section social" data-reveal>
+          <p class="section__title section__title--static">Elsewhere</p>
+          <div class="social__row" id="socialRow">
+            <!-- populated by JS -->
+          </div>
+        </section>
+
+        <!-- ============ FOOTER / CTA ============ -->
+        <footer class="footer" data-reveal>
+          <p class="footer__kicker">Let's work together</p>
+          <h2 class="footer__title">Have a project in mind?</h2>
+          <a class="footer__cta" id="footerWhatsapp" href="#" target="_blank" rel="noopener">
+            Start a conversation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <button class="footer__ghost" id="copyLinkBtn" type="button">Copy card link</button>
+          <div class="footer__rule" aria-hidden="true"></div>
+          <p class="footer__fine">
+            Designed & Hosted by <a href="https://onlineahmedabad.com" target="_blank" rel="noopener"
+              style="text-decoration: underline; color: rgba(255, 255, 255, 0.75);"
+              title="Free Business Website Listing Platform">https://onlineahmedabad.com</a>
+            <br>
+            <span style="font-size: 9px; opacity: 0.8; letter-spacing: 0.05em; text-transform: uppercase;">Free Business
+              Website Listing Platform</span>
+          </p>
+          <p class="footer__fine" style="margin-top: 12px; opacity: 0.5;">
+            &copy; <span id="footYear"></span> <span id="footName"></span> · Digital Card
+          </p>
+        </footer>
+
+      </article>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
